@@ -30,7 +30,7 @@ searchBar.addEventListener('keyup', (e) => {
 
 const loadCharacters = async () => {
     try {
-        const res = await fetch('https://gomhaku.github.io/githubTest/characters.json');
+        const res = await fetch('https://gomhaku.github.io/characters.json');
         gpCharacters = await res.json();
         //displayCharacters(gpCharacters);
        
