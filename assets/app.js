@@ -24,7 +24,7 @@ searchBar.addEventListener('keyup', (e) => {
 
     });
 
-    console.trace("SUPERMAN2222: " + filteredCharacters.length);
+    console.trace("_TEST: " + filteredCharacters.length);
     displayCharacters(filteredCharacters);
 });
 
@@ -54,7 +54,7 @@ const displaySplit = (characters.slice(0,3))
 }
 
 
-    //console.trace("SUPERMAN: " + characters.length + " of " + gpCharacters.length);
+    //console.trace("_TEST: " + characters.length + " of " + gpCharacters.length);
     //console.trace("SLICED: " + characters.slice(0,5));
         const htmlString = (characters.slice(0,10))
         //const htmlString2 = (characters.length)
@@ -68,7 +68,7 @@ const displaySplit = (characters.slice(0,3))
             <li class="pet">
                 <h2>${myJsonData.name}</h2>
                 <p><br>Card Number: ${myJsonData.card_num}<br>
-                Facial Expression/Equation: ${myJsonData.attributes[0].value}<br>
+                Facial Expression: ${myJsonData.attributes[0].value}<br>
                 Pet Type: ${myJsonData.attributes[1].value}<br>
                 Pet Color: ${myJsonData.attributes[2].value}<br>
                 Ribbon Pattern: ${myJsonData.attributes[3].value}<br>
