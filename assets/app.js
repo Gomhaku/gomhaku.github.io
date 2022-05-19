@@ -11,20 +11,16 @@ searchBar.addEventListener('keyup', (e) => {
     const filteredCharacters = gpCharacters.filter((myJsonData) => {
 
         if(searchString.length === 0) {
-          //gpCharacters = []; 
-           //console.trace("SPIDERMAN: " + gpCharacters.length);
-          // charactersList.innerHTML = ${gpCharacters.length};
+          
         }
         else return (
             myJsonData.name.toLowerCase().includes(searchString) ||
             myJsonData.card_num.toLowerCase().includes(searchString)||
             myJsonData.attributes[3].value.toLowerCase().includes(searchString)
-
         );
 
     });
 
-    console.trace("_TEST: " + filteredCharacters.length);
     displayCharacters(filteredCharacters);
 });
 
@@ -32,15 +28,11 @@ const loadCharacters = async () => {
     try {
         const res = await fetch('https://gomhaku.github.io/characters.json');
         gpCharacters = await res.json();
-        //displayCharacters(gpCharacters);
        
     } catch (err) {
         console.error(err);
     }
 };
-
-
-
 
 
 const displayCharacters = (characters) => 
@@ -49,21 +41,14 @@ const displayCharacters = (characters) =>
 const displaySplit = (characters.slice(0,3))
 {
     console.trace("DISPLAY SPLIT: " + displaySplit.length);
-    
-    
+  
 }
 
-
-    //console.trace("_TEST: " + characters.length + " of " + gpCharacters.length);
-    //console.trace("SLICED: " + characters.slice(0,5));
         const htmlString = (characters.slice(0,10))
-        //const htmlString2 = (characters.length)
     
         .map((myJsonData) => 
         {
 
-        //if (characters.length < 50)
-          //{
         return `
             <li class="pet">
                 <h2>${myJsonData.name}</h2>
@@ -77,7 +62,6 @@ const displaySplit = (characters.slice(0,3))
                 <img src=${myJsonData.image}></img>
             </li>
         `;
-
         
         })
     

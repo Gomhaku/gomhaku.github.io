@@ -14,85 +14,65 @@ h1 {
 .header {
     padding: 5px;
     margin: 0 auto;
-    max-width: 320px;
+    max-width: 400px;
     text-align: center;
 }
 
 .container {
     padding: 5px;
     margin:  auto;
-    max-width: 500px;
+    max-width: auto;
     text-align: center;
 }
 
 #charactersList {
     padding-inline-start: 0;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     grid-gap: 10px;
 }
 
 #charactersList2 {
     padding-inline-start: 0;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     grid-gap: 10px;
-}
-
-.pet2 {
-    list-style-type: none;
-    background-color: #FFFFFF;
-    border-radius: 10px;
-    padding: 10px 20px;
-    display: grid;
-    grid-template-columns: 3fr 1fr;
-    grid-template-areas:
-        'name image'
-        'house image';
-    text-align: left;
-    font-size: 14px;
-    line-height:18px;
-}
-.pet2 > h2 {
-    grid-area: name;
-    margin-bottom: 10px;
-    margin-top: 10px;
-    font-size: 20px;
 }
 
 .pet {
     list-style-type: none;
     background-color: #FFFFFF;
     border-radius: 10px;
-    padding: 10px 20px;
+    padding: 10px 10px;
     display: grid;
     grid-template-columns: 3fr 1fr;
     grid-template-areas:
-        'name image'
-        'house image';
+        'stats image'
+        'petPng image';
     text-align: left;
     font-size: 14px;
     line-height:18px;
+
 }
 
 .pet > h2 {
-    grid-area: name;
+    grid-area: stats;
     margin-bottom: 10px;
-    margin-top: 10px;
+    margin-top: 5px;
     font-size: 20px;
 }
 
 .pet > p {
-    grid-area: house;
+    grid-area: petPng;
     margin: 0;
-    margin-top: -18px;
+    margin-top: -25px;
 }
 
 .pet > img {
     max-height: 170px;
     grid-area: image;
     border: 1px solid #E5E8EB;
-    margin-left: 100px;
+    margin-left: 10px;
 }
 
 #searchBar {
@@ -119,7 +99,7 @@ h1 {
 }
 
 .results > h2 {
-    grid-area: name;
+    grid-area: stats;
     margin-bottom: 10px;
     margin-top: 10px;
     font-size: 20px;
