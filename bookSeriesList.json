@@ -1,0 +1,28 @@
+{
+    "Story Wiz": {
+        "volumeNo": ["1", "2", "3"],
+        "bookNo": ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"],
+        "refType": ["Storybook", "Workbook", "Flash Cards (characters)", "Flash Cards (words)"]
+    },
+    "High-Pop": {
+        "volumeNo": ["Runner", "Flyer", "Explorer"],
+        "bookNo": ["1", "2", "3", "4", "5", "6", "7", "8"],
+        "unitNo": ["Complete", "1", "2", "Review Units 1 + 2", "3", "4", "Review Units 3-4"],
+        "refType": ["Student Book", "Workbook", "Flash Cards (words)"]
+    },
+    "Listening Catch": {
+        "volumeNo": ["1", "2", "3", "4", "5"],
+        "bookNo": ["Complete", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "Review"],
+        "refType": ["Student Book", "Workbook", "Flash Cards (words)"]
+    },
+    "Smart Phonics": {
+        "volumeNo": ["1", "2", "3", "4", "5"],
+        "bookNo": ["Complete", "1", "2", "3", "4", "Review 1", "5", "6", "7", "8", "Review 2", "Challenge"],
+        "refType": ["Student Book", "Workbook", "Flash Cards (words)", "Activity Sheet"]
+    },
+    "Phonics Catch": {
+        "volumeNo": ["A", "B", "C", "D"],
+        "bookNo": ["Complete", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "Unit 16"],
+        "refType": ["Student Book", "Workbook", "Flash Cards (words)"]
+    }
+}
