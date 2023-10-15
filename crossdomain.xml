@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-
-<cross-domain-policy>
-<allow-access-from domain="www.google.com" />
-<allow-access-from domain="*.google.com" />
-<allow-access-from domain="*.github.com" />
-<allow-access-from domain="*.gomhaku.github.io" />
-</cross-domain-policy>
