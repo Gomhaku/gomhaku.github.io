@@ -3,5 +3,5 @@
     <allow-access-from domain="www.google.com" />
     <allow-access-from domain="*.google.com" />
     <allow-access-from domain="*.github.com" />
-    <allow-access-from domain="gomhaku.github.io" />
+    <allow-access-from domain="https://gomhaku.github.io" />
 </cross-domain-policy>
