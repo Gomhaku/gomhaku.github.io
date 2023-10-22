@@ -14,7 +14,7 @@
 		public function music_bars() {
 			
 			//create new data store and load external sound
-			sound = new Sound(new URLRequest("sound.mp3"));
+			sound = new Sound(new URLRequest("https://gomhaku.github.io/sound.mp3"));
 			//sound = new Sound(new URLRequest("../sound.mp3"));
 			play_btn.addEventListener(MouseEvent.CLICK,onPlayHandler);
 			stop_btn.addEventListener(MouseEvent.CLICK,onStopHandler);
