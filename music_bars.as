@@ -14,7 +14,7 @@
         private var sound:Sound; // Store the sound data
         private var channel:SoundChannel; // Create sound channel Object
         private var isPlaying:Boolean = false; // Track the play/pause state
-		var pausePosition:Number = 0;
+		private var pausePosition:Number = 0;
 
         public function music_bars() {
             // Create new data store and load external sound
