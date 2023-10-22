@@ -27,7 +27,7 @@
         }
 		
 		private function whooshSFX() {
-				MovieClip(this.parent.parent.parent).play_whoosh();
+				MovieClip(this.parent.root).play_whoosh();
 			}
 		
 		private function char_enter() {
