@@ -14,6 +14,7 @@
         private var sound:Sound; // Store the sound data
         private var channel:SoundChannel; // Create sound channel Object
         private var isPlaying:Boolean = false; // Track the play/pause state
+		var pausePosition:Number = 0;
 
         public function music_bars() {
             // Create new data store and load external sound
@@ -26,12 +27,17 @@
         private function onPlayHandler(event:MouseEvent):void {
             if (isPlaying) {
                 // If currently playing, pause
+				pausePosition = channel.position;
                 channel.stop();
                 isPlaying = false;
+				play_btn.visible = true;
+				stop_btn.visible = false;
             } else {
                 // If not playing, start playing
-                channel = sound.play();
+                channel = sound.play(pausePosition);
                 isPlaying = true;
+				play_btn.visible = false;
+				stop_btn.visible = true;
                 addEventListener(Event.ENTER_FRAME, animateBars);
             }
         }
