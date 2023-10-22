@@ -1,4 +1,7 @@
 ﻿package  {
+import flash.system.Security;
+    Security.allowDomain("*");
+	
 	import flash.display.Sprite;
 	import flash.media.Sound;
 	import flash.net.URLRequest;
@@ -276,11 +279,7 @@ private function char_blink():void
 }
 
 char_blink();
-
-
 	
-		
-		
 
 }
 
