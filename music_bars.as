@@ -1,10 +1,15 @@
 ﻿package  {
+	import flash.system.Security;
+	Security.allowDomain("*");
+	
 	import flash.display.Sprite;
 	import flash.media.Sound;
 	import flash.net.URLRequest;
 	import flash.events.Event;
 	import flash.media.SoundChannel;
 	import flash.events.MouseEvent;
+	
+	
 	
 	public class music_bars extends Sprite {
 		
