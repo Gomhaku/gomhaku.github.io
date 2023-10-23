@@ -37,6 +37,9 @@
 				
 		private function actionTxtFocus(event:MouseEvent):void{
 			    stage.focus = action_txt;
+				MovieClip(this.parent.parent.parent).disableSpecialKeys();
+				MovieClip(this.parent.parent.parent).disableRefKeys();
+				MovieClip(this.parent.parent.parent).disableGameKeys();
 				trace("Special Keys Disabled.  INSIDE EXERNAL CHARACTER.");
 			
 				stage.addEventListener(MouseEvent.CLICK, onClickStage);
@@ -46,6 +49,10 @@
 				
 		private function onClickStage(event:MouseEvent):void {
 			if (event.stageX > 180) {
+				MovieClip(this.parent.parent.parent).enableSpecialKeys();
+				MovieClip(this.parent.parent.parent).enableRefKeys();
+				MovieClip(this.parent.parent.parent).enableGameKeys();
+				MovieClip(this.parent.parent.parent).stageFocus();
 				
 				trace("Special Keys Enabled. INSIDE EXERNAL CHARACTER.");
 				
@@ -174,7 +181,7 @@
 
 		
 		private function whooshSFX() {
-			
+			MovieClip(this.parent.parent.parent).play_whoosh();
 			}
 		
 		private function char_enter() {
@@ -183,7 +190,7 @@
 			}
 			
 		private function removeCharFromParent() {
-				
+				MovieClip(this.parent.parent.parent).charOnOff();
 			}
 			
 		private function _charExit_btn(event:MouseEvent):void {
