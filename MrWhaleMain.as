@@ -195,9 +195,11 @@
 			}
 			
 		private function _charExit_btn(event:MouseEvent):void {
+			trace("whooshSFX TRACE");
 			TweenMax.to(whale, 0.5, {onComplete: whooshSFX});
+			trace("_charExit_btn BEFORE FUNCTION");
 			TweenMax.to(whale.inside, 1, {y: 470, ease:Strong.easeIn, onComplete: removeCharFromParent});
-			trace("_charExit_btn TRACE");
+			trace("_charExit_btn AFTER ACTION");
 			}
 
 
