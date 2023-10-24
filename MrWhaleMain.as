@@ -191,16 +191,18 @@
 			
 		private function removeCharFromParent() {
 				MovieClip(this.parent.root).charOnOff();
+			trace("removeCharFromParent TRACE");
 			}
 			
 		private function _charExit_btn(event:MouseEvent):void {
 			TweenMax.to(whale, 0.5, {onComplete: whooshSFX});
 			TweenMax.to(whale.inside, 1, {y: 470, ease:Strong.easeIn, onComplete: removeCharFromParent});
+			trace("_charExit_btn TRACE");
 			}
 
 
 		private function onStopHandler(event:MouseEvent):void {
-            trace("HELLO 02");
+            trace("HELLO FROM GITHUB TEST 02");
             }
 
 	
