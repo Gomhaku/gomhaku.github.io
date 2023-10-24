@@ -11,6 +11,7 @@
 	import flash.media.SoundChannel;
 	import flash.media.SoundLoaderContext;
 	import flash.events.MouseEvent;
+	import flash.utils.setTimeout;
 	
 	import flash.display.MovieClip;
     import flash.events.KeyboardEvent;
@@ -29,6 +30,7 @@
 			whale.inside.head.mouthHole.frame.visible = false;
 			whale.inside.head.skull.frame.visible = false; 
 			char_enter();
+			char_blink();
 			yellowCover.addEventListener(MouseEvent.CLICK, onStopHandler);
 			charExit_btn.addEventListener(MouseEvent.CLICK, _charExit_btn);
 			action_txt.addEventListener(MouseEvent.CLICK, actionTxtFocus);
@@ -206,6 +208,17 @@
             }
 
 	
+		private function char_blink():void{
+			whale.inside.head.eyes.inside.left.gotoAndPlay(2);
+			whale.inside.head.eyes.inside.right.gotoAndPlay(2);
+			
+			TweenMax.fromTo(whale.inside.head,0.5,
+			     {scaleX: 1.01, scaleY: 0.99},
+				 {scaleX: 1, scaleY: 1, yoyo: true, ease:Back.easeIn});
+			
+			setTimeout(char_blink, 5000);
+			}
+			
 		
        trace("HELLO 03");
     }
