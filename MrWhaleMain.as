@@ -79,7 +79,6 @@
 			}	
 				
 		private function viewAction():void{
-			
 			var string:String;
 			string = dynamicTxt.text;
 
@@ -98,11 +97,12 @@
 				newTranslation();
 				}	
 			}	
-				
 			
 		private function newTranslation():void{
 			var EnglishTxt:String;
+			trace("newTranslation BEFORE ACTION");
 			EnglishTxt = "https://translate.googleapis.com/translate_a/single?client=gtx&sl=en&tl=ko&dt=t&q=" + dynamicTxt.text;
+			trace("newTranslation AFTER ACTION");
 			
 			var myLoader:URLLoader = new URLLoader();
 			myLoader.load(new URLRequest(EnglishTxt));
@@ -119,7 +119,6 @@
 }
 			
         public var vocals_channel:SoundChannel = new SoundChannel();
-			
 
         private function playTranslation():void{
 			var vars:URLVariables = new URLVariables();
@@ -164,7 +163,6 @@
                      }
 }
 
-
 	    private function vocals_sync(event:Event):void{
 	        whale.inside.head.jaw.width = ( Math.round(vocals_channel.leftPeak * -30) ) + whale.inside.head.jaw.frame.width;
 	        whale.inside.head.jaw.height = ( Math.round(vocals_channel.leftPeak * -100) ) + whale.inside.head.jaw.frame.height;
@@ -195,9 +193,9 @@
 			}
 			
 		private function _charExit_btn(event:MouseEvent):void {
-			trace("whooshSFX TRACE");
+			trace("whooshSFX BEFORE ACTION");
 			TweenMax.to(whale, 0.5, {onComplete: whooshSFX});
-			trace("_charExit_btn BEFORE FUNCTION");
+			trace("_charExit_btn BEFORE ACTION");
 			TweenMax.to(whale.inside, 1, {y: 470, ease:Strong.easeIn, onComplete: removeCharFromParent});
 			trace("_charExit_btn AFTER ACTION");
 			}
